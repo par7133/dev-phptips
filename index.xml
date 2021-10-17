@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+
+<!-- File name: index.xml 
+BSD 3-Clause License
+
+Copyright (c) 2021, 2024, 5 Mode
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+
+<CONTENT>
+	<ITEM>
+    <ID>1</ID>
+    <DATE>Thu October 14th 2021</DATE>
+    <TITLE>Directory separation</TITLE>
+    <BODY><![CDATA[
+It is a good practice to separate the resources managed
+by the web server from all the other scripts, .php, .inc or whatever
+can remain private to the application.
+Basically, you can quitely set a Public dir with your php router (usually
+the index.php file) and the static content of your web app; while in the Private 
+dir you are going to set all the rest of your web app, that you will go to 
+include through the router or other mechanism.
+]]></BODY>
+    <SEE/>  
+		<SEE-URL/>  
+		<TYPE>tip</TYPE>
+    <CAT>security</CAT>
+		<INDEX>1</INDEX>
+	</ITEM>
+	<ITEM>
+    <ID>2</ID>
+    <DATE>Thu October 14th 2021</DATE>
+    <TITLE>Initialization: one file, easy life</TITLE>
+    <BODY><![CDATA[
+Having wrote also just a small router for your web app you remain
+to decide where to initialize all your web app const, classes, etc.
+There is no better way than including an ad-hoc init.inc file where to 
+set all the needed resources, initialize session, cache, error
+handling, etc.
+]]></BODY>    
+    <SEE/>  
+		<SEE-URL/>
+		<TYPE>tip</TYPE>
+    <CAT>deployment</CAT>
+		<INDEX>2</INDEX>
+	</ITEM>
+	<ITEM>
+    <ID>3</ID>
+    <DATE>Fri October 15th 2021</DATE>
+    <TITLE>Beautiful php, secrets included</TITLE>
+    <BODY><![CDATA[
+When you are going to write some code that needs to be *recognized*
+and *served* by the webserver you can write it in a *beautiful* .php
+extension. When, instead, you are going to write some classes or 
+some reusable code that just needs to be *included* and *not served*
+to the user it is the time to write a *secret* .inc file. The point is 
+exactly that your frontend webserver is most probably not configured 
+to serve the .inc files. Remember that this choice is safe only when 
+it is adopted in conjunction with a directory separation approach.
+]]></BODY>  
+    <SEE>Directory separation</SEE>  
+		<SEEURL>#1</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>security</CAT>
+		<INDEX>3</INDEX>
+	</ITEM>
+	<ITEM>
+    <ID>4</ID>
+    <DATE>Sat October 16th 2021</DATE>
+    <TITLE>The oracle to my code secrets</TITLE>
+    <BODY><![CDATA[
+PHP language is continuosly evolving and assimilating new functionalities 
+becoming more fast too. 
+Beside this it is nice to have coding good practices and profiling 
+tools to tune your own PHP code: Webgrind is surely the tool that needs to 
+be in your coding bag. It is a web app, written in PHP, easy to deploy 
+and easy to understand (that is never too bad); it makes use of Xdebug 
+under the cover.  
+]]></BODY>  
+    <SEE>Webgrind</SEE>  
+		<SEEURL>http://github.com/jokkedk/webgrind</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>tuning</CAT>
+		<INDEX>4</INDEX>
+	</ITEM>  
+	<ITEM>
+    <ID>5</ID>
+    <DATE>Sat October 16th 2021</DATE>
+    <TITLE>As simple as SimpleXML</TITLE>
+    <BODY><![CDATA[
+XML is the optimal approach to small quantity of data and nowadays 
+manipulable in many ways, in PHP too. 
+You can read an XML with file() and parse it by your own logic, with
+the mere help of reg expressions and string functions - umh. 
+You can read an XML file and parsing it by events - umh.
+Finally, SimpleXML comes in handy letting us access an XML in
+object and properties fashion like in this way:
+
+echo $content->tip[0]->body;  
+]]></BODY>  
+    <SEE>Basic SimpleXML usage</SEE>  
+		<SEEURL>http://php.net/manual/en/simplexml.examples-basic.php</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>data</CAT>
+		<INDEX>5</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>6</ID>
+    <DATE>Sat October 16th 2021</DATE>
+    <TITLE>Performance at first glance</TITLE>
+    <BODY><![CDATA[
+Do not hurry John Doe, it is not arrived the time to scale yet.. 
+But - maybe - it is the case to always use some good coding practices? 
+Sure no one say us what to obay to while coding in PHP - and lucky it 
+is so. However, there are some tuning practices we can use with ease: 
+- Take advantage of type hints since PHP ver 7.
+- Set variable types with settype.
+- Pass and "consume" arrays by reference.
+- Use overwhelming quantity of constants.
+- Prefer explicit to implicit type conversions.  
+]]></BODY>  
+    <SEE/>  
+		<SEEURL/>
+		<TYPE>tip</TYPE>
+    <CAT>tuning</CAT>
+		<INDEX>6</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>7</ID>
+    <DATE>Sat October 16th 2021</DATE>
+    <TITLE>Simplicity makes the trick</TITLE>
+    <BODY><![CDATA[      
+All of us feel fantastic making great programming. But for one
+reason or the others, who admitted finally along their careers that 
+*doing it simple* is important was always right: it let us have
+managiable and reusable code with a strong cut on documentation
+and commenting. Do it simple for who? Clearly for ourself
+but mainly for all the other people who work with us and
+*consume* PHP.   
+]]></BODY>  
+    <SEE/>  
+		<SEEURL/>
+		<TYPE>tip</TYPE>
+    <CAT>syntax</CAT>
+		<INDEX>7</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>8</ID>
+    <DATE>Sat October 16th 2021</DATE>
+    <TITLE>Null coalescing is yet your friend</TITLE>
+    <BODY><![CDATA[      
+Undubtly PHP function isset() miss a default value when all
+of us are searching to add it to its implementation....
+Indeed it is quite *simple* to write our own *simple* custom function 
+but let's do it more *simple*, the mysterious null coaleshing operator 
+comes really in handy for our purpose:
+
+echo $var1 ?? $var2;    
+]]></BODY>  
+    <SEE>Null Coalescing Operator</SEE>  
+		<SEEURL>http://php.net/manual/en/language.operators.comparison.php</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>syntax</CAT>
+		<INDEX>8</INDEX>
+	</ITEM>
+</CONTENT>
