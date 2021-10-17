@@ -2,7 +2,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		version="1.0"> 
 
-<xsl:output method="html" version="4"/>
+<xsl:output method="html"/>
 
 <!-- File name: index.xsl 
 BSD 3-Clause License
@@ -99,7 +99,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </td>  
       </tr>
       <tr>
-        <td height="500px" style="width:100%;height:500px;overflow-y:scroll;">
+        <td style="width:100%;height:300px;overflow-y:scroll;">
       
         <table style="border:0;margin:0;padding:0;width:100%;height:1900px;">     
         <tr>
