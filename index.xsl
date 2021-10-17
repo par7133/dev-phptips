@@ -233,8 +233,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          
            setTimeout("setFooterPos()", 1000);
      
-           $("#content-td")css("height", (parseInt(window.innerHeight) - 118) + "px");
-           $("#content-cont")css("height", (parseInt(window.innerHeight) - 118) + "px"); 
+           $("#content-td").css("height", (parseInt(window.innerHeight) - 118) + "px");
+           $("#content-cont").css("height", (parseInt(window.innerHeight) - 118) + "px"); 
      
          } 
                      
