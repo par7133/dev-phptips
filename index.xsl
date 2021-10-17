@@ -101,7 +101,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <tr>
         <td id="content-td" style="width:100%;height:100%;boder:1px solid red;">
       
-        <div style="height:100%;overflow-y:scroll;">
+        <div id="content-cont" style="height:100%;overflow-y:scroll;">
       
         <table style="border:0;margin:0;padding:0;width:100%;height:1900px;">     
         <tr>
@@ -234,6 +234,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            setTimeout("setFooterPos()", 1000);
      
            $("#content-td")css("height", (parseInt(window.innerHeight) - 118) + "px");
+           $("#content-cont")css("height", (parseInt(window.innerHeight) - 118) + "px"); 
      
          } 
                      
