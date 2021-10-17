@@ -99,7 +99,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </td>  
       </tr>
       <tr>
-        <td style="width:100%;overflow-y:yes;height:500px">
+        <td style="width:100%;overflow-y:auto;height:500px">
       
         <table style="border:0;margin:0;padding:0;width:100%">     
         <tr>
