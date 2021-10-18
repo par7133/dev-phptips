@@ -1,3 +1,5 @@
+
+var bBurgerMenuVisible = false;
     
 $("input#q").on("keydown",function(e){
   key = e.which; 
@@ -38,6 +40,13 @@ function setContent() {
       $(this).css("display", "none");
     }    
   });  
+  if (bodyRect.width > 660) {
+    $(".burger-menu").css("display", "none");
+    $(".cat-list-td").css("display", "inline");
+  } else {
+    $(".burger-menu").css("display", "inline");
+    $(".cat-list-td").css("display", "none");
+  }    
   $(".mblonly").each(function(){
     if (bodyRect.width > 660) {
       $(this).css("display", "none");
@@ -53,6 +62,15 @@ function setContent() {
     }    
   });  
 }  
+
+$(".burger-menu").on("click", function(){
+  if (bBurgerMenuVisible) {
+    $(".cat-list-td").css("display", "none");
+  } else {
+    $(".cat-list-td").css("display", "inline");
+  }  
+  bBurgerMenuVisible = !bBurgerMenuVisible; 
+});
 
 function mymain() {
 
