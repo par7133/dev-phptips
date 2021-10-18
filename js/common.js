@@ -47,7 +47,7 @@ function setContent() {
   });  
   $(".cat").each(function(){
     if (bodyRect.width < 660) {
-      $(this).css("width", "96%");
+      $(this).css("width", "95.5%");
       $(this).css("padding", "15px");
       $(this).css("background-color", "#4c5d8d");
       $(this).css("margin-bottom", "5px");
