@@ -54,7 +54,7 @@ a {
   padding-left:10px;
   height:40px;
   position: relative;
-  top:+2px;
+  top:-2px;
   cursor:pointer;
 }
 .cat {
