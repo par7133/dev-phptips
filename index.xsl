@@ -43,6 +43,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
       <TITLE>PHP Tips: All</TITLE>
 	  
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
 	  	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
 		  <meta name="description" content="Welcome to PHP Tips. Tips about PHP, its usage, application, deployment and behond.."/>
 	    <meta name="robots" content="index,follow"/>
