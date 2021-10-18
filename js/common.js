@@ -74,7 +74,7 @@ $(".burger-menu").on("click", function(){
   if (bBurgerMenuVisible) {
     $(".cat-list-td").css("display", "none");
   } else {
-    $(".cat-list-td").css("display", "inline");
+    $(".cat-list-td").css("display", "table-cell");
   }  
   bBurgerMenuVisible = !bBurgerMenuVisible; 
 });
