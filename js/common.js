@@ -34,8 +34,15 @@ function setContent() {
   $(".dktoponly").each(function(){
     if (bodyRect.width > 900) {
       $(this).css("display", "inline");
+      $(this).css("padding", "15px");
+      $(this).css("background-color", "#4c5d8d");
+      //$(this).css("background-color", "#4c5d8d");
+      $(this).css("margin-bottom", "5px");
     } else {
       $(this).css("display", "none");
+      $(this).css("padding", "");
+      $(this).css("background-color", "");
+      $(this).css("margin-bottom", "");
     }    
   });  
   $(".mblonly").each(function(){
