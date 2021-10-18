@@ -55,6 +55,7 @@ a {
   height:40px;
   position: relative;
   top:+2px;
+  cursor:pointer;
 }
 .cat {
   float:left;
