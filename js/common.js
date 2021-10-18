@@ -46,10 +46,10 @@ function setContent() {
   // Burger Manu
   if (bodyRect.width > 900) {
     $(".burger-menu").css("display", "none");
-    //$(".cat-list-td").css("display", "inline");
+    $(".cat-list-td").css("display", "table-cell");
   } else {
     $(".burger-menu").css("display", "inline");
-    //$(".cat-list-td").css("display", "none");
+    $(".cat-list-td").css("display", "none");
   }   
   
   // Cat Menu 
