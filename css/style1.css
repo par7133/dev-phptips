@@ -53,6 +53,12 @@ a {
   width:fit-content;
   padding-left:30px;
 }
+.cat-mbl {
+  width:92%;
+  padding:15px;
+  background-color:#4c5d8d;
+  margin-bottom:5px;
+}
 .cat-list-td {
   width:100%; 
   background-color:#828eaf; 
@@ -131,7 +137,7 @@ a {
   text-align:left; 
   padding-top:10px; 
   vertical-align:top; 
-  min-width: 350px;
+  min-width: 400px;
 }
 .index-ve-cont {
   padding-top:8px;
