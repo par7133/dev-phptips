@@ -39,7 +39,7 @@ function setContent() {
     }    
   });  
   $(".mblonly").each(function(){
-    if (bodyRect.width > 900) {
+    if (bodyRect.width > 660) {
       $(this).css("display", "none");
     } else {
       $(this).css("display", "inline");
