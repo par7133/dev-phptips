@@ -65,9 +65,9 @@ function mymain() {
 
 } 
 
-$(document).ready(function() {           
+window.addEventListener("load", function() {
   mymain();
-}
+}};
 
 window.addEventListener("resize", function() {
   mymain();
