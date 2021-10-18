@@ -64,8 +64,10 @@ function mymain() {
  $("#content-cont").css("height", (parseInt(window.innerHeight) - 118) + "px");     
 
 } 
-           
-mymain();
+
+$(document).ready(function() {           
+  mymain();
+}
 
 window.addEventListener("resize", function() {
   mymain();
