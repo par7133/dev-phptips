@@ -40,13 +40,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <DATE>Thu October 14th 2021</DATE>
     <TITLE>Directory separation</TITLE>
     <BODY><![CDATA[
-It is a good practice to separate the resources managed
-by the web server from all the other scripts, .php, .inc or whatever
-can remain private to the application.
-Basically, you can quitely set a Public dir with your php router (usually
-the index.php file) and the static content of your web app; while in the Private 
-dir you are going to set all the rest of your web app, that you will go to 
-include through the router or other mechanism.
+It is a good practice to separate the resources managed by the web server from all the other scripts, .php, .inc or whatever can remain private to the application. Basically, you can quitely set a Public dir with your php router (usually the index.php file) and the static content of your web app; while in the Private dir you are going to set all the rest of your web app, that you will go to include through the router or other mechanism.
 ]]></BODY>
     <SEE/>  
 		<SEE-URL/>  
@@ -59,11 +53,7 @@ include through the router or other mechanism.
     <DATE>Thu October 14th 2021</DATE>
     <TITLE>Initialization: one file, easy life</TITLE>
     <BODY><![CDATA[
-Having wrote also just a small router for your web app you remain
-to decide where to initialize all your web app const, classes, etc.
-There is no better way than including an ad-hoc init.inc file where to 
-set all the needed resources, initialize session, cache, error
-handling, etc.
+Having wrote also just a small router for your web app you remain to decide where to initialize all your web app const, classes, etc. There is no better way than including an ad-hoc init.inc file where to set all the needed resources, initialize session, cache, error handling, etc.
 ]]></BODY>    
     <SEE/>  
 		<SEE-URL/>
@@ -76,14 +66,7 @@ handling, etc.
     <DATE>Fri October 15th 2021</DATE>
     <TITLE>Beautiful php, secrets included</TITLE>
     <BODY><![CDATA[
-When you are going to write some code that needs to be *recognized*
-and *served* by the webserver you can write it in a *beautiful* .php
-extension. When, instead, you are going to write some classes or 
-some reusable code that just needs to be *included* and *not served*
-to the user it is the time to write a *secret* .inc file. The point is 
-exactly that your frontend webserver is most probably not configured 
-to serve the .inc files. Remember that this choice is safe only when 
-it is adopted in conjunction with a directory separation approach.
+When you are going to write some code that needs to be *recognized* and *served* by the webserver you can write it in a *beautiful* .php extension. When, instead, you are going to write some classes or some reusable code that just needs to be *included* and *not served* to the user it is the time to write a *secret* .inc file. The point is exactly that your frontend webserver is most probably not configured to serve the .inc files. Remember that this choice is safe only when it is adopted in conjunction with a directory separation approach.
 ]]></BODY>  
     <SEE>Directory separation</SEE>  
 		<SEEURL>#1</SEEURL>
@@ -96,13 +79,7 @@ it is adopted in conjunction with a directory separation approach.
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>The oracle to my code secrets</TITLE>
     <BODY><![CDATA[
-PHP language is continuosly evolving and assimilating new functionalities 
-becoming more fast too. 
-Beside this it is nice to have coding good practices and profiling 
-tools to tune your own PHP code: Webgrind is surely the tool that needs to 
-be in your coding bag. It is a web app, written in PHP, easy to deploy 
-and easy to understand (that is never too bad); it makes use of Xdebug 
-under the cover.  
+PHP language is continuosly evolving and assimilating new functionalities becoming more fast too. Beside this it is nice to have coding good practices and profiling tools to tune your own PHP code: Webgrind is surely the tool that needs to be in your coding bag. It is a web app, written in PHP, easy to deploy and easy to understand (that is never too bad); it makes use of Xdebug under the cover.  
 ]]></BODY>  
     <SEE>Webgrind</SEE>  
 		<SEEURL>http://github.com/jokkedk/webgrind</SEEURL>
@@ -115,13 +92,7 @@ under the cover.
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>As simple as SimpleXML</TITLE>
     <BODY><![CDATA[
-XML is the optimal approach to small quantity of data and nowadays 
-manipulable in many ways, in PHP too. 
-You can read an XML with file() and parse it by your own logic, with
-the mere help of reg expressions and string functions - umh. 
-You can read an XML file and parsing it by events - umh.
-Finally, SimpleXML comes in handy letting us access an XML in
-object and properties fashion like in this way:
+XML is the optimal approach to small quantity of data and nowadays manipulable in many ways, in PHP too. You can read an XML with file() and parse it by your own logic, with the mere help of reg expressions and string functions - umh. You can read an XML file and parsing it by events - umh. Finally, SimpleXML comes in handy letting us access an XML in object and properties fashion like in this way:
 
 echo $content->tip[0]->body;  
 ]]></BODY>  
@@ -136,10 +107,7 @@ echo $content->tip[0]->body;
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Performance at first glance</TITLE>
     <BODY><![CDATA[
-Do not hurry John Doe, it is not arrived the time to scale yet.. 
-But - maybe - it is the case to always use some good coding practices? 
-Sure no one say us what to obay to while coding in PHP - and lucky it 
-is so. However, there are some tuning practices we can use with ease: 
+Do not hurry John Doe, it is not arrived the time to scale yet.. But - maybe - it is the case to always use some good coding practices? Sure no one say us what to obay to while coding in PHP - and lucky it is so. However, there are some tuning practices we can use with ease: 
 - Take advantage of type hints since PHP ver 7.
 - Set variable types with settype.
 - Pass and "consume" arrays by reference.
@@ -157,13 +125,7 @@ is so. However, there are some tuning practices we can use with ease:
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Simplicity makes the trick</TITLE>
     <BODY><![CDATA[      
-All of us feel fantastic making great programming. But for one
-reason or the others, who admitted finally along their careers that 
-*doing it simple* is important was always right: it let us have
-managiable and reusable code with a strong cut on documentation
-and commenting. Do it simple for who? Clearly for ourself
-but mainly for all the other people who work with us and
-*consume* PHP.   
+All of us feel fantastic making great programming. But for one reason or the others, who admitted finally along their careers that *doing it simple* is important was always right: it let us have managiable and reusable code with a strong cut on documentation and commenting. Do it simple for who? Clearly for ourself but mainly for all the other people who work with us and *consume* PHP.   
 ]]></BODY>  
     <SEE/>  
 		<SEEURL/>
@@ -176,8 +138,7 @@ but mainly for all the other people who work with us and
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Null coalescing is yet your friend</TITLE>
     <BODY><![CDATA[      
-Undubtly PHP function isset() miss a default value when all of us are searching to add it to its implementation....
-Indeed it is quite *simple* to write our own *simple* custom function but let's do it more *simple*, the mysterious null coaleshing operator comes really in handy for our purpose:
+Undubtly PHP function isset() miss a default value when all of us are searching to add it to its implementation.... Indeed it is quite *simple* to write our own *simple* custom function but let's do it more *simple*, the mysterious null coaleshing operator comes really in handy for our purpose:
 
 echo $var1 ?? $var2;    
 ]]></BODY>  
@@ -192,12 +153,7 @@ echo $var1 ?? $var2;
     <DATE>Sun October 17th 2021</DATE>
     <TITLE>Polyfills from Classic ASP</TITLE>
     <BODY><![CDATA[      
-Switching to PHP development it could be easy to find yourself sometimes 
-breaking into obstruct syntax and not so simple-as-on-the-go instructions.
-On the obstruct syntax, you can fix your coding erasing the more naif or
-depracated or unsafe code (pay attention: it exists!). On the simplicity,
-you can find yourself within the need to replicate some simpler 
-instuctions or ideas from other *worlds*. 
+Switching to PHP development it could be easy to find yourself sometimes breaking into obstruct syntax and not so simple-as-on-the-go instructions. On the obstruct syntax, you can fix your coding erasing the more naif or depracated or unsafe code (pay attention: it exists!). On the simplicity, you can find yourself within the need to replicate some simpler instuctions or ideas from other *worlds*. 
 
 These are some string and date/time polyfills created behind Classic ASP:
 ]]>
@@ -213,39 +169,12 @@ These are some string and date/time polyfills created behind Classic ASP:
     <DATE>Sun October 17th 2021</DATE>
     <TITLE>Used to latest PHP modernity</TITLE>
     <BODY><![CDATA[      
-Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some 
-years of support and bug fixes has been going on under development. 
-Less fashinating is the fact that we need to keep our servers updated
-to the last version of PHP, and expecially thinking to your production
-server is not so *healthy*. Two news come useful for these cases. First,
-PHP latest versions have a good back compatibility with their ancestors.
-Second, devops software like Docker comes in handy to solve *little*
-deployment prbs. Anyway your *devview* should focus on this doc: 
+Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should focus on this doc: 
 ]]></BODY>  
     <SEE>Supported versions</SEE>  
 		<SEEURL>https://php.net/supported-versions</SEEURL>
 		<TYPE>tip</TYPE>
     <CAT>deployment</CAT>
 		<INDEX>10</INDEX>
-	</ITEM>
-  <ITEM>
-    <ID>11</ID>
-    <DATE>Sun October 17th 2021</DATE>
-    <TITLE>Safe with latest PHP modernity</TITLE>
-    <BODY><![CDATA[      
-Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some 
-years of support and bug fixes has been going on under development. 
-Less fashinating is the fact that we need to keep our servers updated
-to the last version of PHP, and expecially thinking to your production
-server is not so *healthy*. Two news come useful for these cases. First,
-PHP latest versions have a good back compatibility with their ancestors.
-Second, devops software like Docker comes in handy to solve *little*
-deployment prbs. Anyway your *devview* should focus on this doc: 
-]]></BODY>  
-    <SEE>Supported versions</SEE>  
-		<SEEURL>https://php.net/supported-versions</SEEURL>
-		<TYPE>tip</TYPE>
-    <CAT>security</CAT>
-		<INDEX>11</INDEX>
 	</ITEM>
 </CONTENT>
