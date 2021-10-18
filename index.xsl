@@ -125,7 +125,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             </a>
             &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
             <hr class="hr-tips"/>    
-            <pre style="width:100%;white-space:normal;"><xsl:value-of select="BODY"/></pre>
+            <pre style="width:100%;white-space:pre-line;"><xsl:value-of select="BODY"/></pre>
             
             <xsl:choose>
             <xsl:when test="SEE!=''">
