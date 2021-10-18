@@ -28,7 +28,28 @@ function setFooterPos() {
  }
 }
 
+function setContent() {
+  
+  bodyRect = document.body.getBoundingClientRect();
+  $(".dktoponly").each(function(){
+    if (bodyRect.height > 800) {
+      $(this).css("display", "inline");
+    } else {
+      $(this).css("display", "none");
+    }    
+  });  
+  $(".mblonly").each(function(){
+    if (bodyRect.height > 800) {
+      $(this).css("display", "none");
+    } else {
+      $(this).css("display", "inline");
+    }    
+  });  
+}  
+
 function mymain() {
+
+ setContent();
 
  setTimeout("setFooterPos()", 1000);
 
