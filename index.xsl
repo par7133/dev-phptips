@@ -89,13 +89,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <tr>
         <td class="cat-list-td" colspan="3">
           
-          <div class="cat"><a href="/" class="aaa3-selected">all</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/deployment.xml" class="aaa3">deployment</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/security.xml" class="aaa3">security</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/data.xml" class="aaa3">data</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a><br class="mblonly"/></div>
-          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/deployment.xml" class="aaa3">deployment</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/security.xml" class="aaa3">security</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a></div><br class="mblonly"/>
+          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a></div><br class="mblonly"/>
           
         </td>  
       </tr>     
