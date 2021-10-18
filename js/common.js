@@ -46,10 +46,10 @@ function setContent() {
   // Burger Manu
   if (bodyRect.width > 900) {
     $(".burger-menu").css("display", "none");
-    $(".cat-list-td").css("display", "table-cell");
+    $(".cat-list-tr").css("display", "table-row");
   } else {
     $(".burger-menu").css("display", "inline");
-    $(".cat-list-td").css("display", "none");
+    $(".cat-list-tr").css("display", "none");
   }   
   
   // Cat Menu 
@@ -72,9 +72,9 @@ function setContent() {
 
 $(".burger-menu").on("click", function(){
   if (bBurgerMenuVisible) {
-    $(".cat-list-td").css("display", "none");
+    $(".cat-list-tr").css("display", "none");
   } else {
-    $(".cat-list-td").css("display", "table-cell");
+    $(".cat-list-tr").css("display", "table-row");
   }  
   bBurgerMenuVisible = !bBurgerMenuVisible; 
 });
