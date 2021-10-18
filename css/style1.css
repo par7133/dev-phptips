@@ -51,8 +51,8 @@ a {
 .burger-menu {
   float:left;
   width:fit-content;
-  padding-left:30px;
-  height:48px;
+  padding-left:10px;
+  height:40px;
   position: relative;
   top:+2px;
 }
