@@ -2,7 +2,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		version="1.0"> 
 
-<xsl:output method="html"/>
+<xsl:output method="html" version="4"/>
 
 <!-- File name: index.xsl 
 BSD 3-Clause License
@@ -95,87 +95,88 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a></div>
           <div class="cat"><a href="/data.xml" class="aaa3">data</a></div>
           <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a></div>
+          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a></div>
           
         </td>  
-      </tr>
-      <tr>
-        <td id="content-td" style="width:100%;height:100%;boder:1px solid red;">
+      </tr>     
+      <tr>         
+       <td id="content-td" style="width:100%;height:100%;boder:1px solid red;">
       
         <div id="content-cont" style="height:100%;overflow-y:scroll;">
       
         <table style="border:0;margin:0;padding:0;width:100%;height:1900px;">     
         <tr>
-          <td class="tips-td">
-            
-            <xsl:for-each select="ITEM[TYPE='tip']">
-      
-            <xsl:sort select="ID" data-type="number" order="ascending"/>
-      
-            <div>
-              <xsl:attribute name="id"><xsl:value-of select="ID"/></xsl:attribute>
-              <xsl:attribute name="style">padding:10px;</xsl:attribute>
-              <span style="font-style:italic">
-                <xsl:value-of select="DATE"/>
-              </span><br/>
-              <a>
-                <xsl:attribute name="href"><xsl:value-of select="CAT"/>.xml</xsl:attribute>
-                <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
-                [&#8201;<xsl:value-of select="CAT"/>&#8201;]
-              </a>
-              &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
-              <hr class="hr-tips"/>    
-              <pre><xsl:value-of select="BODY"/></pre>
-              
-              <xsl:choose>
-              <xsl:when test="SEE!=''">
-                see:&#8201;
-                <a>
-                  <xsl:attribute name="href"><xsl:value-of select="SEEURL"/></xsl:attribute>
-                  <xsl:attribute name="style">font-weight:600; font-style:italic; color:#FFFFFF;</xsl:attribute>
-                  "<xsl:value-of select="SEE"/>"
-                </a>  
-              </xsl:when> 
-              </xsl:choose>
-               
-            </div>
-      
-            </xsl:for-each>
-            
-          </td>
+		    <td class="tips-td">
           
-          <td id="tdl" class="index-td">
-
-            <xsl:for-each select="ITEM[TYPE='tip']">
-      
-            <xsl:sort select="ID" data-type="number" order="ascending"/>
-      
-            <div class="index-ve-cont">
+          <xsl:for-each select="ITEM[TYPE='tip']">
+		
+			    <xsl:sort select="ID" data-type="number" order="ascending"/>
+		
+			    <div>
+            <xsl:attribute name="id"><xsl:value-of select="ID"/></xsl:attribute>
+            <xsl:attribute name="style">padding:10px;</xsl:attribute>
+		      	<span style="font-style:italic">
+              <xsl:value-of select="DATE"/>
+            </span><br/>
+            <a>
+              <xsl:attribute name="href"><xsl:value-of select="CAT"/>.xml</xsl:attribute>
+              <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
+              [&#8201;<xsl:value-of select="CAT"/>&#8201;]
+            </a>
+            &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
+            <hr class="hr-tips"/>    
+            <pre><xsl:value-of select="BODY"/></pre>
+            
+            <xsl:choose>
+            <xsl:when test="SEE!=''">
+              see:&#8201;
               <a>
-                <xsl:attribute name="target">_self</xsl:attribute> 
-                <xsl:attribute name="class">aaa2</xsl:attribute>
-                <xsl:attribute name="href">#<xsl:value-of select="ID"/></xsl:attribute>
-                <span style="color:lightgray">&lt; &gt;</span>&#8201;&#8201;<span style="white-space:no-wrap"><xsl:value-of select="TITLE"/></span>
-              </a>
-            </div>
-
-            <hr class="hr-index"/>  
-      
-            </xsl:for-each>
-
-          </td>
+                <xsl:attribute name="href"><xsl:value-of select="SEEURL"/></xsl:attribute>
+                <xsl:attribute name="style">font-weight:600; font-style:italic; color:#FFFFFF;</xsl:attribute>
+                "<xsl:value-of select="SEE"/>"
+              </a>  
+            </xsl:when> 
+            </xsl:choose>
+             
+          </div>
+		
+	      	</xsl:for-each>
           
-          <td width="4%">
-            &#8201;
-          </td>  
+          <br/><br/><br/>
+          
+        </td>
+        
+        <td id="tdl" class="index-td">
+
+          <xsl:for-each select="ITEM[TYPE='tip']">
+		
+			    <xsl:sort select="ID" data-type="number" order="ascending"/>
+		
+          <div class="index-ve-cont">
+            <a>
+              <xsl:attribute name="target">_self</xsl:attribute> 
+              <xsl:attribute name="class">aaa2</xsl:attribute>
+              <xsl:attribute name="href">#<xsl:value-of select="ID"/></xsl:attribute>
+              <span style="color:lightgray">&lt; &gt;</span>&#8201;&#8201;<span style="white-space:no-wrap"><xsl:value-of select="TITLE"/></span>
+            </a>
+          </div>
+
+          <hr class="hr-index"/>  
+    
+	      	</xsl:for-each>
+
+        </td>
+        
+        <td width="4%">
+          &#8201;
+        </td>  
         </tr>
         </table>
-
         </div>
-
-        </td>  
+      
+      </td>  
       </tr>
       </table>
-
       
       <div id="footerCont">&#8201;</div>
       <div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&#8201;&#8201;<a class="aaa" href="dd.html">Disclaimer</a>.&#8201;&#8201;A <a class="aaa" href="http://5mode.com">5 Mode</a> project and <a class="aaa" href="http://wysiwyg.systems">WYSIWYG</a> system. Some rights reserved.</span></div>
@@ -193,62 +194,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         linkids[<xsl:value-of select="ID"/>] = <xsl:value-of select="ID"/>;
         
         </xsl:for-each>
+      
+      </script>
          
-        <![CDATA[                
-      
-          $("input#q").on("keydown",function(e){
-            key = e.which; 
-            if (key===13) {
-              e.preventDefault();
-              search(this);
-            } else {
-            }
-          });    
-      
-         function search(this1) {
-           var text = $(this1).val();
-           var re = new RegExp(text, "gi");
-           //reshtml = "<datalist id='liveres'>";
-           for(i=1;i<linkt.length;i++) {
-             title = linkt[i];
-             id =  linkids[i];
-             if (re.test(title)) {
-               //reshtml = reshtml + "<option value='" + title + "'>";
-               window.open("#"+id, "_self");
-             }
-           }
-           //reshtml = reshtml + "</datalist>";
-           //$("#contres").html(reshtml);    
-         }
-      
-         function setFooterPos() {
-           if (document.getElementById("footerCont")) {
-             tollerance = 16;
-             $("#footerCont").css("top", parseInt( window.innerHeight - $("#footerCont").height() - tollerance ) + "px");
-             $("#footer").css("top", parseInt( window.innerHeight - $("#footer").height() - tollerance ) + "px");
-           }
-         }
-      
-         function mymain() {
-         
-           setTimeout("setFooterPos()", 1000);
-     
-           $("#content-td").css("height", (parseInt(window.innerHeight) - 118) + "px");
-           $("#content-cont").css("height", (parseInt(window.innerHeight) - 118) + "px"); 
-     
-         } 
-                     
-         mymain();
-         
-         window.addEventListener("resize", function() {
-            mymain();
-         });
-
-      ]]>   
-		  </script>
-      
-	  </BODY>
-	  </HTML>
+      <script src="./js/common.js" type="text/javascript"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -267,7 +216,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <noscript><div><img src="https://mc.yandex.ru/watch/85938360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-     	
+      
+	  </BODY>
+	  </HTML>
+
 	</xsl:template>
 
 </xsl:stylesheet> 

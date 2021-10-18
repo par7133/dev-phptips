@@ -190,4 +190,64 @@ echo $var1 ?? $var2;
     <CAT>syntax</CAT>
 		<INDEX>8</INDEX>
 	</ITEM>
+  <ITEM>
+    <ID>9</ID>
+    <DATE>Sun October 17th 2021</DATE>
+    <TITLE>Polyfills from Classic ASP</TITLE>
+    <BODY><![CDATA[      
+Switching to PHP development it could be easy to find yourself sometimes 
+breaking into obstruct syntax and not so simple-as-on-the-go instructions.
+On the obstruct syntax, you can fix your coding erasing the more naif or
+depracated or unsafe code (pay attention: it exists!). On the simplicity,
+you can find yourself within the need to replicate some simpler 
+instuctions or ideas from other *worlds*. 
+
+These are some string and date/time polyfills created behind Classic ASP:
+]]></BODY>  
+    <SEE>Classic ASP polyfills</SEE>  
+		<SEEURL>https://github.com/par7133/phptips.net/tree/main/downloads</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>polyfills</CAT>
+		<INDEX>9</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>10</ID>
+    <DATE>Sun October 17th 2021</DATE>
+    <TITLE>Used to latest PHP modernity</TITLE>
+    <BODY><![CDATA[      
+Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some 
+years of support and bug fixes has been going on under development. 
+Less fashinating is the fact that we need to keep our servers updated
+to the last version of PHP, and expecially thinking to your production
+server is not so *healthy*. Two news come useful for these cases. First,
+PHP latest versions have a good back compatibility with their ancestors.
+Second, devops software like Docker comes in handy to solve *little*
+deployment prbs. Anyway your *devview* should focus on this doc: 
+]]></BODY>  
+    <SEE>Supported versions</SEE>  
+		<SEEURL>https://php.net/supported-versions</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>deployment</CAT>
+		<INDEX>10</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>11</ID>
+    <DATE>Sun October 17th 2021</DATE>
+    <TITLE>Safe with latest PHP modernity</TITLE>
+    <BODY><![CDATA[      
+Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some 
+years of support and bug fixes has been going on under development. 
+Less fashinating is the fact that we need to keep our servers updated
+to the last version of PHP, and expecially thinking to your production
+server is not so *healthy*. Two news come useful for these cases. First,
+PHP latest versions have a good back compatibility with their ancestors.
+Second, devops software like Docker comes in handy to solve *little*
+deployment prbs. Anyway your *devview* should focus on this doc: 
+]]></BODY>  
+    <SEE>Supported versions</SEE>  
+		<SEEURL>https://php.net/supported-versions</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>security</CAT>
+		<INDEX>11</INDEX>
+	</ITEM>
 </CONTENT>
