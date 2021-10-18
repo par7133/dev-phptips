@@ -64,9 +64,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         
           <div class="header-logo"><a href="/" class="header-aaa"><span style="color:black;"><i>php</i></span><span style="color:red; font-size:20px;">tips</span></a></div>
           <div class="header-link"><a href="https://github.com/par7133/phptips.net/tree/main/downloads" class="header-aaa">Downloads</a></div>
-          <div class="header-link"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talks</a></div>
-          <div class="header-link"><a href="http://github.com/par7133/phptips.net" class="header-aaa">Join us</a></div>
-          <div class="header-link"><a href="mailto:info@phptips.net" class="header-aaa">Feedback</a></div>
+          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talks</a></div>
+          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net" class="header-aaa">Join us</a></div>
+          <div class="header-link dktoponly"><a href="mailto:info@phptips.net" class="header-aaa">Feedback</a></div>
           
           <div class="search-cont"><input id="q" list="liveres" type="text" class="search-box" placeholder="search" maxlength="30"/>&#8201;&#8201;</div>
           
@@ -89,13 +89,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <tr>
         <td class="cat-list-td" colspan="3">
           
-          <div class="cat"><a href="/" class="aaa3-selected">all</a></div>
-          <div class="cat"><a href="/deployment.xml" class="aaa3">deployment</a></div>
-          <div class="cat"><a href="/security.xml" class="aaa3">security</a></div>
-          <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a></div>
-          <div class="cat"><a href="/data.xml" class="aaa3">data</a></div>
-          <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a></div>
-          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a></div>
+          <div class="cat"><a href="/" class="aaa3-selected">all</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/deployment.xml" class="aaa3">deployment</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/security.xml" class="aaa3">security</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/data.xml" class="aaa3">data</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a><br class="mblonly"/></div>
+          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a><br class="mblonly"/></div>
           
         </td>  
       </tr>     
