@@ -61,7 +61,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <table border="0" width="100%" height="100%" style="border:0;margin:0;">
       <tr>
         <td class="header-td" colspan="3">
-        
+           
+          <div class="burger-menu" style="display:none;"><img src="./res/burger-menu2.png" style="width:48px"></div> 
+           
           <div class="header-logo"><a href="/" class="header-aaa"><span style="color:black;"><i>php</i></span><span style="color:red; font-size:20px;">tips</span></a></div>
           <div class="header-link"><a href="https://github.com/par7133/phptips.net/tree/main/downloads" class="header-aaa">Downloads</a></div>
           <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talks</a></div>
