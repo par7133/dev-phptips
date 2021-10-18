@@ -88,7 +88,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           
         </td>   
       </tr>
-      <tr>
+      <tr class="cat-list-tr">
         <td class="cat-list-td" colspan="3">
           
           <div class="cat"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly" style="display:none;"/>
