@@ -33,6 +33,8 @@ function setFooterPos() {
 function setContent() {
   
   bodyRect = document.body.getBoundingClientRect();
+  
+  // Header
   $(".dktoponly").each(function(){
     if (bodyRect.width > 900) {
       $(this).css("display", "inline");
@@ -40,13 +42,17 @@ function setContent() {
       $(this).css("display", "none");
     }    
   });  
+  
+  // Burger Manu
   if (bodyRect.width > 900) {
     $(".burger-menu").css("display", "none");
-    $(".cat-list-td").css("display", "inline");
+    //$(".cat-list-td").css("display", "inline");
   } else {
     $(".burger-menu").css("display", "inline");
     //$(".cat-list-td").css("display", "none");
-  }    
+  }   
+  
+  // Cat Menu 
   $(".mblonly").each(function(){
     if (bodyRect.width > 900) {
       $(this).css("display", "none");
@@ -61,6 +67,7 @@ function setContent() {
       $(this).removeClass("cat-mbl");
     }    
   });  
+  
 }  
 
 $(".burger-menu").on("click", function(){
