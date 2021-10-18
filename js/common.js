@@ -32,14 +32,14 @@ function setContent() {
   
   bodyRect = document.body.getBoundingClientRect();
   $(".dktoponly").each(function(){
-    if (bodyRect.width > 800) {
+    if (bodyRect.width > 900) {
       $(this).css("display", "inline");
     } else {
       $(this).css("display", "none");
     }    
   });  
   $(".mblonly").each(function(){
-    if (bodyRect.width > 800) {
+    if (bodyRect.width > 900) {
       $(this).css("display", "none");
     } else {
       $(this).css("display", "inline");
