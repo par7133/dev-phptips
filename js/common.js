@@ -40,7 +40,7 @@ function setContent() {
       $(this).css("display", "none");
     }    
   });  
-  if (bodyRect.width > 660) {
+  if (bodyRect.width > 900) {
     $(".burger-menu").css("display", "none");
     $(".cat-list-td").css("display", "inline");
   } else {
@@ -48,14 +48,14 @@ function setContent() {
     $(".cat-list-td").css("display", "none");
   }    
   $(".mblonly").each(function(){
-    if (bodyRect.width > 660) {
+    if (bodyRect.width > 900) {
       $(this).css("display", "none");
     } else {
       $(this).css("display", "inline");
     }    
   });  
   $(".cat").each(function(){
-    if (bodyRect.width < 660) {
+    if (bodyRect.width < 900) {
       $(this).addClass("cat-mbl");
     } else {
       $(this).removeClass("cat-mbl");
