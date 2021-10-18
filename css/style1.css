@@ -48,6 +48,14 @@ a {
   position: relative;
   top:-1px;
 }
+.burger-menu {
+  float:left;
+  width:fit-content;
+  padding-left:30px;
+  height:48px;
+  position: relative;
+  top:+2px;
+}
 .cat {
   float:left;
   width:fit-content;
