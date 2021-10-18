@@ -67,7 +67,7 @@ function mymain() {
 
 window.addEventListener("load", function() {
   mymain();
-}};
+});
 
 window.addEventListener("resize", function() {
   mymain();
