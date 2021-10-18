@@ -45,7 +45,7 @@ function setContent() {
     $(".cat-list-td").css("display", "inline");
   } else {
     $(".burger-menu").css("display", "inline");
-    $(".cat-list-td").css("display", "none");
+    //$(".cat-list-td").css("display", "none");
   }    
   $(".mblonly").each(function(){
     if (bodyRect.width > 900) {
