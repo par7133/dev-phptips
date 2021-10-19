@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
 	  	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
-		  <meta name="description" content="Welcome to PHP Tips. Tips about PHP, its usage, application, deployment and behond.."/>
+		  <meta name="description" content="Welcome to PHP Tips. Tips about PHP, its usage, application, deployment and beyond.."/>
 	    <meta name="robots" content="index,follow"/>
       <meta name="author" content="5 Mode"/> 
      
@@ -60,7 +60,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <BODY>
       
-      <table border="0" width="100%" height="100%" style="border:0;margin:0;">
+      <table class="main-table">
       <tr>
         <td class="header-td" colspan="3">
            
@@ -100,15 +100,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <div class="cat"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat"><a href="/oop.xml" class="aaa3">oop</a></div><br class="mblonly" style="display:none;"/>
           
         </td>  
       </tr>     
       <tr>         
-       <td id="content-td" style="width:100%;height:100%;boder:1px solid red;">
+       <td id="content-td">
       
-        <div id="content-cont" style="height:100%;overflow-y:scroll;">
+        <div id="content-cont">
       
-        <table style="border:0;margin:0;padding:0;width:100%;height:1900px;">     
+        <table class="content-table">     
         <tr>
 		    <td class="tips-td">
           
@@ -171,7 +172,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
         </td>
         
-        <td width="4%">
+        <td width="4%" class="index-empty-td">
           &#8201;
         </td>  
         </tr>

@@ -79,7 +79,7 @@ When you are going to write some code that needs to be *recognized* and *served*
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>The oracle to my code secrets</TITLE>
     <BODY><![CDATA[
-PHP language is continuosly evolving and assimilating new functionalities becoming more fast too. Beside this it is nice to have coding good practices and profiling tools to tune your own PHP code: Webgrind is surely the tool that needs to be in your coding bag. It is a web app, written in PHP, easy to deploy and easy to understand (that is never too bad); it makes use of Xdebug under the cover.  
+PHP language is continuosly evolving and assimilating new functionalities becoming more fast too. Beside this it is nice to have good coding practices and profiling tools to tune your own PHP code: Webgrind is surely the tool that needs to be in your coding bag. It is a web app, written in PHP, easy to deploy and easy to understand (that is never too bad); it makes use of Xdebug under the cover.  
 ]]></BODY>  
     <SEE>Webgrind</SEE>  
 		<SEEURL>http://github.com/jokkedk/webgrind</SEEURL>
@@ -107,7 +107,7 @@ echo $content->tip[0]->body;
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Performance at first glance</TITLE>
     <BODY><![CDATA[
-Do not hurry John Doe, it is not arrived the time to scale yet.. But - maybe - it is the case to always use some good coding practices? Sure no one say us what to obay to while coding in PHP - and lucky it is so. However, there are some tuning practices we can use with ease: 
+Do not hurry John Doe, it is not arrived the time to scale yet.. However, there are some tuning practices we can use with ease: 
 - Take advantage of type hints since PHP ver 7.
 - Set variable types with settype.
 - Pass and "consume" arrays by reference.
@@ -156,8 +156,7 @@ echo $var1 ?? $var2;
 Switching to PHP development it could be easy to find yourself sometimes breaking into obstruct syntax and not so simple-as-on-the-go instructions. On the obstruct syntax, you can fix your coding erasing the more naif or depracated or unsafe code (pay attention: it exists!). On the simplicity, you can find yourself within the need to replicate some simpler instuctions or ideas from other *worlds*. 
 
 These are some string and date/time polyfills created behind Classic ASP:
-]]>
-</BODY>  
+]]></BODY>  
     <SEE>Classic ASP polyfills</SEE>  
 		<SEEURL>https://github.com/par7133/phptips.net/tree/main/downloads</SEEURL>
 		<TYPE>tip</TYPE>
@@ -169,12 +168,42 @@ These are some string and date/time polyfills created behind Classic ASP:
     <DATE>Sun October 17th 2021</DATE>
     <TITLE>Used to latest PHP modernity</TITLE>
     <BODY><![CDATA[      
-Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, some years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should focus on this doc: 
+Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should focus on this doc: 
 ]]></BODY>  
     <SEE>Supported versions</SEE>  
 		<SEEURL>https://php.net/supported-versions</SEEURL>
 		<TYPE>tip</TYPE>
     <CAT>deployment</CAT>
 		<INDEX>10</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>11</ID>
+    <DATE>Mon October 18th 2021</DATE>
+    <TITLE>Final gel to a brilliant skull</TITLE>
+    <BODY><![CDATA[      
+There are classes and classes. When we are going to write some *perfect* code following best practices and standards then the final keyword is certainly something we should take in careful consideration both on security and on efficiency side of our coding. When we are working on big project, strong versioning and many clients.. well, the full inheritance flexibility is certainly something desirable. 
+
+Despite everything the Final keyword is definitely something you should check out: 
+]]></BODY>  
+    <SEE>Final Keyword</SEE>  
+		<SEEURL>https://www.php.net/manual/en/language.oop5.final.php</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>oop</CAT>
+		<INDEX>11</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>12</ID>
+    <DATE>Tue October 19th 2021</DATE>
+    <TITLE>'Frictionless coding' mantra</TITLE>
+    <BODY><![CDATA[      
+Having a rich programming language at your disposal and freedom to invent and coding by our own genius and pragmatism.. let’s say that sometimes could be deleterious. Especially when you are building software with others, in a company, on Github, the rigor of some coding standards is something necessary to facilitate the shared work. About PHP, a cross-committee of the developer community time-to-time update a set of coding standard recommendations named PSR. Rely on PSR coding standards, especially the more generic PSR-1 and PSR-2 ones, is something as *normal* as IDEs like NetBeans have software facilities released to help enforcing their usage. 
+
+Definitely have a look to the PSR coding recommendations: 
+]]></BODY>  
+    <SEE>PSR-2: Coding Style Guide</SEE>  
+		<SEEURL>https://www.php-fig.org/psr/psr-2/</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>syntax</CAT>
+		<INDEX>12</INDEX>
 	</ITEM>
 </CONTENT>
