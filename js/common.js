@@ -36,7 +36,7 @@ function setContent() {
   
   // Header
   $(".dktoponly").each(function(){
-    if (bodyRect.width > 900) {
+    if (bodyRect.width > 1000) {
       $(this).css("display", "inline");
     } else {
       $(this).css("display", "none");
@@ -44,7 +44,7 @@ function setContent() {
   });  
   
   // Burger Manu
-  if (bodyRect.width > 900) {
+  if (bodyRect.width > 1000) {
     $(".burger-menu").css("display", "none");
     $(".cat-list-tr").css("display", "table-row");
   } else {
@@ -54,14 +54,14 @@ function setContent() {
   
   // Cat Menu 
   $(".mblonly").each(function(){
-    if (bodyRect.width > 900) {
+    if (bodyRect.width > 1000) {
       $(this).css("display", "none");
     } else {
       $(this).css("display", "inline");
     }    
   });  
   $(".cat").each(function(){
-    if (bodyRect.width < 900) {
+    if (bodyRect.width < 1000) {
       $(this).addClass("cat-mbl");
     } else {
       $(this).removeClass("cat-mbl");
