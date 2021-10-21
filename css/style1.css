@@ -214,6 +214,7 @@ a {
   width:35%; 
   text-align:left; 
   min-width: 350px;
+  max-width: 412px;
 }
 .tips-td {
   width:70%; 
