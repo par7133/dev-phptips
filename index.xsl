@@ -110,7 +110,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </td>  
       </tr>     
       <tr>         
-       <td id="content-td">
+       <td id="content-td" colspan="2">
       
         <div id="content-cont">
       
