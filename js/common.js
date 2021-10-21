@@ -56,8 +56,14 @@ function setContent() {
       $(this).css("display", "none");
     }    
   });  
-  
-  // Burger Manu
+ 
+  if (bodyRect.width < 800) {
+    $(".index-td").css("min-width","0px");
+  } else {
+    $(".index-td").css("min-width","");
+  }
+    
+  // Burger Menu
   if (bodyRect.width > 1000) {
     $(".burger-menu").css("display", "none");
     $(".cat-list-tr").css("display", "table-row");
