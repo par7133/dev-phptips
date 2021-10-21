@@ -50,7 +50,7 @@ function setContent() {
   //$(".search-box").val(window.innerWidth);
 
   $(".noxs").each(function(){
-    if (window.innerWidth > 500) {
+    if (bodyRect.width > 1000) {
       $(this).css("display", "inline");
     } else {
       $(this).css("display", "none");
