@@ -202,6 +202,7 @@ a {
   font-size:13px;
   position: relative;
   left:+2%;
+  top:-3px;
 }
 .search-cont {
   width:33%;
