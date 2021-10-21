@@ -58,8 +58,10 @@ function setContent() {
   });  
  
   if (bodyRect.width < 800) {
+    $(".search-td").css("min-width","300px");
     $(".index-td").css("min-width","0px");
   } else {
+    $(".search-td").css("min-width","");
     $(".index-td").css("min-width","");
   }
     
