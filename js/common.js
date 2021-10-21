@@ -46,6 +46,14 @@ function setContent() {
       $(this).css("display", "none");
     }    
   });  
+
+  $(".noxs").each(function(){
+    if (bodyRect.width > 500) {
+      $(this).css("display", "inline");
+    } else {
+      $(this).css("display", "none");
+    }    
+  });  
   
   // Burger Manu
   if (bodyRect.width > 1000) {
