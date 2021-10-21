@@ -62,17 +62,20 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       
       <table class="main-table">
       <tr>
-        <td class="header-td" colspan="3">
+        <td class="header-td">
            
           <div class="burger-menu" style="display:none;"><img src="./res/burger-menu2.png" style="width:40px"/></div> 
            
           <div class="header-logo"><a href="/" class="header-aaa"><span style="color:black;"><i>php</i></span><span style="color:red; font-size:20px;">tips</span></a></div>
           <div class="header-link"><a href="https://github.com/par7133/phptips.net/tree/main/downloads" class="header-aaa">Downloads</a></div>
-          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talks</a></div>
-          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net" class="header-aaa">Join us</a></div>
+          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talk</a></div>
+          <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net" class="header-aaa">Join in</a></div>
           <div class="header-link dktoponly"><a href="mailto:info@phptips.net" class="header-aaa">Feedback</a></div>
           
-          <div class="search-cont"><input id="q" list="liveres" type="text" class="search-box" placeholder="search" maxlength="30"/>&#8201;&#8201;</div>
+        </td>   
+        <td class="search-td">
+
+          <input id="q" list="liveres" type="text" class="search-box" placeholder="search" maxlength="30"/>&#8201;&#8201;
           
           <datalist id="liveres">
           <xsl:for-each select="ITEM[TYPE='tip']">
@@ -88,19 +91,21 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           
           <br/>
           
-        </td>   
+        </td>  
       </tr>
       <tr class="cat-list-tr">
-        <td class="cat-list-td" colspan="3">
+        <td class="cat-list-td" colspan="2">
           
-          <div class="cat"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/deployment.xml" class="aaa3">deployment</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/security.xml" class="aaa3">security</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/tuning.xml" class="aaa3">tuning</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/syntax.xml" class="aaa3">syntax</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/polyfills.xml" class="aaa3">polyfills</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat"><a href="/oop.xml" class="aaa3">oop</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/','_self')"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/deployment.xml','_self')"><a href="/deployment.xml" class="aaa3">deployment</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/security.xml','_self')"><a href="/security.xml" class="aaa3">security</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/tuning.xml','_self')"><a href="/tuning.xml" class="aaa3">tuning</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/data.xml','_self')"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/syntax.xml','_self')"><a href="/syntax.xml" class="aaa3">syntax</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/polyfills.xml','_self')"><a href="/polyfills.xml" class="aaa3">polyfills</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/oop.xml','_self')"><a href="/oop.xml" class="aaa3">oop</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/net.xml','_self')"><a href="/net.xml" class="aaa3">net</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/int.xml','_self')"><a href="/int.xml" class="aaa3">int</a></div><br class="mblonly" style="display:none;"/>
           
         </td>  
       </tr>     

@@ -38,9 +38,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	<ITEM>
     <ID>1</ID>
     <DATE>Thu October 14th 2021</DATE>
-    <TITLE>Directory separation</TITLE>
+    <TITLE>Private dir, less voyeurs</TITLE>
     <BODY><![CDATA[
-It is a good practice to separate the resources managed by the web server from all the other scripts, .php, .inc or whatever can remain private to the application. Basically, you can quitely set a Public dir with your php router (usually the index.php file) and the static content of your web app; while in the Private dir you are going to set all the rest of your web app, that you will go to include through the router or other mechanism.
+It is a good practice to separate the resources managed by the web server from all the other scripts, .inc or whatever can remain private to the application. Basically, you can quitely set a Public dir with your php router (usually the index.php file) and the static content of your web app; while in the Private dir you are going to set all the rest of your web app (that you will go to include through the router or other mechanism).
 ]]></BODY>
     <SEE/>  
 		<SEE-URL/>  
@@ -53,7 +53,7 @@ It is a good practice to separate the resources managed by the web server from a
     <DATE>Thu October 14th 2021</DATE>
     <TITLE>Initialization: one file, easy life</TITLE>
     <BODY><![CDATA[
-Having wrote also just a small router for your web app you remain to decide where to initialize all your web app const, classes, etc. There is no better way than including an ad-hoc init.inc file where to set all the needed resources, initialize session, cache, error handling, etc.
+Having wrote just a small router with the classic *Hello World*, *Back to Life*, *Iron Clothes* actions.. you remain to decide where to initialize your new web application. There is no better way than including an ad-hoc init.inc file where to set all the needed resources, autoloader, session, cache, error handling, etc.
 ]]></BODY>    
     <SEE/>  
 		<SEE-URL/>
@@ -68,7 +68,7 @@ Having wrote also just a small router for your web app you remain to decide wher
     <BODY><![CDATA[
 When you are going to write some code that needs to be *recognized* and *served* by the webserver you can write it in a *beautiful* .php extension. When, instead, you are going to write some classes or some reusable code that just needs to be *included* and *not served* to the user it is the time to write a *secret* .inc file. The point is exactly that your frontend webserver is most probably not configured to serve the .inc files. Remember that this choice is safe only when it is adopted in conjunction with a directory separation approach.
 ]]></BODY>  
-    <SEE>Directory separation</SEE>  
+    <SEE>Private dir, less voyeurs</SEE>  
 		<SEEURL>#1</SEEURL>
 		<TYPE>tip</TYPE>
     <CAT>security</CAT>
@@ -92,7 +92,7 @@ PHP language is continuosly evolving and assimilating new functionalities becomi
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>As simple as SimpleXML</TITLE>
     <BODY><![CDATA[
-XML is the optimal approach to small quantity of data and nowadays manipulable in many ways, in PHP too. You can read an XML with file() and parse it by your own logic, with the mere help of reg expressions and string functions - umh. You can read an XML file and parsing it by events - umh. Finally, SimpleXML comes in handy letting us access an XML in object and properties fashion like in this way:
+XML is the optimal approach to small quantity of data and nowadays manipulable in many ways, in PHP too. You can read an XML with file() and parse it by your own logic, with the mere help of reg expressions and string functions, uh? You can read an XML file and parsing it by events, uh? Finally, SimpleXML comes in handy letting us access an XML in object and properties fashion like in this way:
 
 echo $content->tip[0]->body;  
 ]]></BODY>  
@@ -107,11 +107,11 @@ echo $content->tip[0]->body;
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Performance at first glance</TITLE>
     <BODY><![CDATA[
-Do not hurry John Doe, it is not arrived the time to scale yet.. However, there are some tuning practices we can use with ease: 
+Do not hurry John Doe, it is not arrived the time to scale yet.. However, there are some tuning practices we can always use with ease: 
 - Take advantage of type hints since PHP ver 7.
 - Set variable types with settype.
 - Pass and "consume" arrays by reference.
-- Use overwhelming quantity of constants.
+- Use an overwhelming quantity of constants.
 - Prefer explicit to implicit type conversions.  
 ]]></BODY>  
     <SEE/>  
@@ -138,7 +138,7 @@ All of us feel fantastic making great programming. But for one reason or the oth
     <DATE>Sat October 16th 2021</DATE>
     <TITLE>Null coalescing is yet your friend</TITLE>
     <BODY><![CDATA[      
-Undubtly PHP function isset() miss a default value when all of us are searching to add it to its implementation.... Indeed it is quite *simple* to write our own *simple* custom function but let's do it more *simple*, the mysterious null coaleshing operator comes really in handy for our purpose:
+Undubtly PHP function isset() miss a default value when all of us are searching to add it to its implementation.. Indeed it is quite *simple* to write our own *simple* custom function but let's do it more *simple*, the mysterious null coaleshing operator comes really in handy for our purpose:
 
 echo $var1 ?? $var2;    
 ]]></BODY>  
@@ -168,7 +168,7 @@ These are some string and date/time polyfills created behind Classic ASP:
     <DATE>Sun October 17th 2021</DATE>
     <TITLE>Used to latest PHP modernity</TITLE>
     <BODY><![CDATA[      
-Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should focus on this doc: 
+Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should point to this doc: 
 ]]></BODY>  
     <SEE>Supported versions</SEE>  
 		<SEEURL>https://php.net/supported-versions</SEEURL>
@@ -196,7 +196,7 @@ Despite everything the Final keyword is definitely something you should check ou
     <DATE>Tue October 19th 2021</DATE>
     <TITLE>'Frictionless coding' mantra</TITLE>
     <BODY><![CDATA[      
-Having a rich programming language at your disposal and freedom to invent and coding by our own genius and pragmatism.. let’s say that sometimes could be deleterious. Especially when you are building software with others, in a company, on Github, the rigor of some coding standards is something necessary to facilitate the shared work. About PHP, a cross-committee of the developer community time-to-time update a set of coding standard recommendations named PSR. Rely on PSR coding standards, especially the more generic PSR-1 and PSR-2 ones, is something as *normal* as IDEs like NetBeans have software facilities released to help enforcing their usage. 
+Having a rich programming language at our disposal and freedom to invent and coding by our own genius and pragmatism.. let’s say that sometimes could be deleterious. Especially when we are building software with others, in a company, on Github, the rigor of some coding standards is something necessary to facilitate the shared work. About PHP, a cross-committee of the developer community time-to-time updates a set of coding standard recommendations named PSR. Relying on PSR coding standards, especially the more generic PSR-1 and PSR-2 ones, is something as *normal* as IDEs like NetBeans have software facilities released to help enforcing their usage. 
 
 Definitely have a look to the PSR coding recommendations: 
 ]]></BODY>  
@@ -205,5 +205,81 @@ Definitely have a look to the PSR coding recommendations:
 		<TYPE>tip</TYPE>
     <CAT>syntax</CAT>
 		<INDEX>12</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>13</ID>
+    <DATE>Tue October 19th 2021</DATE>
+    <TITLE>Records of network casualties</TITLE>
+    <BODY><![CDATA[      
+A certain number of advanced PHP network instructions exist almost in an uncovered fashion: as it is not so good to advertise them as it is not so common to find yourself in the need of them. However, when things get hard to test and find out it could happen that working with dns records takes in less variables - ie. you are dealing with an host under load balancing or sites available in different geographical regions). In this cases checkdnsrr() or dns_get_record(), with different php support and implementation, come in handy:
+
+$host = “phptips.net”;
+print_r(dns_get_record($host, DNS_A));
+]]></BODY>  
+    <SEE/>  
+		<SEEURL/>
+		<TYPE>tip</TYPE>
+    <CAT>net</CAT>
+		<INDEX>13</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>14</ID>
+    <DATE>Tue October 19th 2021</DATE>
+    <TITLE>Clients like cookies</TITLE>
+    <BODY><![CDATA[      
+Must be that session cookies are too sweet, this explains why Javascript persists to like them a lot.. PHP has a number of php.ini settings to protect sessions and among these session.use_strict_mode and session.cookie_httponly are some of the more important ones. *Strict mode* forces the session module to check for session IDs initialized by the module itself and not user generated. *Http only* forbids the cookies access by Javascript to the compatible browsers.
+]]></BODY>  
+    <SEE>Securing Session INI Settings</SEE>  
+		<SEEURL>https://www.php.net/manual/en/session.security.ini.php</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>security</CAT>
+		<INDEX>14</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>15</ID>
+    <DATE>Tue October 19th 2021</DATE>
+    <TITLE>All paths take to Rome</TITLE>
+    <BODY><![CDATA[      
+Honestly one thing is to exaggerate with best practices and one thing is to not care at all. Probably the right approach resides still in the middle. An other consideration comes about PHP bugs and hacking, but this is out of the scope of this *tip*. However, if you want to close all in a *safe*, PHP supplies you with the php.ini open_basedir directive. Setting *open_basedir* with the root path of your web app you are going to force eg. PHP includes or fopen() calls to handle only scripts contained in that path.
+]]></BODY>  
+    <SEE/>
+		<SEEURL/>
+		<TYPE>tip</TYPE>
+    <CAT>security</CAT>
+		<INDEX>15</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>16</ID>
+    <DATE>Wed October 20th 2021</DATE>
+    <TITLE>Unicode call to Multibyte</TITLE>
+    <BODY><![CDATA[      
+When you are going to develop a web application tailored for a broad audience using Unicode you should not forget about PHP itself. Indeed, PHP through the optional mbstring module gives at your disposal a set of functions named *multibyte string functions* that allow you to deal with unicode string with no worry. And what does it mean to you choosing a multibyte string function like mb_stripos() instead of the *standard* stripos()? It means exactly not looking at stripos() failing on unicode strings.
+]]></BODY>  
+    <SEE>PHP: Introduction to Multibyte strings</SEE>  
+		<SEEURL>https://www.php.net/manual/en/intro.mbstring.php</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>int</CAT>
+		<INDEX>16</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>17</ID>
+    <DATE>Wed October 20th 2021</DATE>
+    <TITLE>Being strict better than wrong</TITLE>
+    <BODY><![CDATA[      
+Playing around your code with strings, mainly if you are using them as a shortcut to arrays in your configuration file.. you can break into a little semantical problem of functions like stripos(): a 0 position of the needle in the hashtag could be evaluated as a false result. The fix using the strict comparison operator comes really in handy:
+
+$bestSites = “PHPTips.net|..|”;
+
+// This is NOT correct..
+if (stripos($bestSites, “PHPTips.net”)) { 
+
+// This IS correct!
+if (stripos($bestSites, “PHPTips.net”) !== false) {
+]]></BODY>  
+    <SEE/>  
+		<SEEURL/>
+		<TYPE>tip</TYPE>
+    <CAT>syntax</CAT>
+		<INDEX>17</INDEX>
 	</ITEM>
 </CONTENT>
