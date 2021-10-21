@@ -40,7 +40,7 @@ a {
 }
 .aaa3-selected {
   text-decoration: none;
-  font-size: 15px;
+  /*font-size: 15px;*/
   font-weight:900;
   /*color: #31bc31;*/
   color:#000000;
@@ -61,12 +61,26 @@ a {
   float:left;
   width:fit-content;
   padding-left:30px;
+  cursor: pointer;
 }
 .cat-mbl {
-  width:92%;
+  width:42%;
   padding:15px;
   background-color:#4c5d8d;
   margin-bottom:5px;
+  margin-right:0.8%;
+}
+.cat-mbl a {
+  /*border-bottom: 4px solid #4c5d8d;*/
+}  
+.cat-mbl:hover {
+  background-color:gray;
+  color: #FFFFFF;
+}
+.cat-mbl:hover a {
+  background-color:gray;
+  text-decoration:underline;
+  color: #FFFFFF;
 }
 .cat-list-td {
   width:100%; 
@@ -182,19 +196,21 @@ a {
   height:100%;
 }
 .search-box {
-  width:80%;
+  width:26%;
   height:24px;
-  /*min-width:29%;*/
   font-size:13px;
   position: relative;
-  left:+8%;
+  left:+2%;
 }
 .search-cont {
   width:33%;
   float:right;
-  position:relative;
-  top:+0px;
-  border: 0px solid red;
+}
+.search-td {
+  background-color: #e7e7e7;
+  width:30%; 
+  text-align:left; 
+  min-width: 400px;
 }
 .tips-td {
   width:70%; 
