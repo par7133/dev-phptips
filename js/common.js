@@ -47,6 +47,8 @@ function setContent() {
     }    
   });  
 
+  $(".search-box").val(window.innerWidth);
+
   $(".noxs").each(function(){
     if (window.innerWidth > 500) {
       $(this).css("display", "inline");
