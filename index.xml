@@ -111,7 +111,7 @@ Do not hurry John Doe, it is not arrived the time to scale yet.. However, there 
 - Take advantage of type hints since PHP ver 7.
 - Set variable types with settype.
 - Pass and "consume" arrays by reference.
-- Use an overwhelming quantity of constants.
+- Use constants.
 - Prefer explicit to implicit type conversions.  
 ]]></BODY>  
     <SEE/>  
@@ -168,7 +168,7 @@ These are some string and date/time polyfills created behind Classic ASP:
     <DATE>Sun October 17th 2021</DATE>
     <TITLE>Used to latest PHP modernity</TITLE>
     <BODY><![CDATA[      
-Since PHP 5.6 lot of time has gone and lucky it is so: since 2014, years of support and bug fixes has been going on under development. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should point to this doc: 
+Since PHP 5.6 lot of time has gone and lucky it is so: many years of support and bug fixing has been going on under development since there. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should point to this doc: 
 ]]></BODY>  
     <SEE>Supported versions</SEE>  
 		<SEEURL>https://php.net/supported-versions</SEEURL>
@@ -196,7 +196,7 @@ Despite everything the Final keyword is definitely something you should check ou
     <DATE>Tue October 19th 2021</DATE>
     <TITLE>'Frictionless coding' mantra</TITLE>
     <BODY><![CDATA[      
-Having a rich programming language at our disposal and freedom to invent and coding by our own genius and pragmatism.. let’s say that sometimes could be deleterious. Especially when we are building software with others, in a company, on Github, the rigor of some coding standards is something necessary to facilitate the shared work. About PHP, a cross-committee of the developer community time-to-time updates a set of coding standard recommendations named PSR. Relying on PSR coding standards, especially the more generic PSR-1 and PSR-2 ones, is something as *normal* as IDEs like NetBeans have software facilities released to help enforcing their usage. 
+Having a rich programming language at our disposal and freedom to invent and coding by our own genius and pragmatism.. let’s say that sometimes could be deleterious. Especially when we are building software with others, in a company, on Github, the rigor of some coding standards is something necessary to facilitate the shared work. About PHP, a cross-committee of the developer community time-to-time updates a set of coding standard recommendations named PSR. Relying on PSR coding standards, especially the more generic PSR-1 and PSR-2 ones, is something as *normal* as.. IDEs like NetBeans have software facilities enforcing their usage. 
 
 Definitely have a look to the PSR coding recommendations: 
 ]]></BODY>  
@@ -211,7 +211,7 @@ Definitely have a look to the PSR coding recommendations:
     <DATE>Tue October 19th 2021</DATE>
     <TITLE>Records of network casualties</TITLE>
     <BODY><![CDATA[      
-A certain number of advanced PHP network instructions exist almost in an uncovered fashion: as it is not so good to advertise them as it is not so common to find yourself in the need of them. However, when things get hard to test and find out it could happen that working with dns records takes in less variables - ie. you are dealing with an host under load balancing or sites available in different geographical regions). In this cases checkdnsrr() or dns_get_record(), with different php support and implementation, come in handy:
+A certain number of advanced PHP network instructions exist almost in an uncovered fashion: as it is not good to advertise them, as it is not common to find ourself in the need of them. However, when things get hard to test and find out it could happen that working with dns records takes in less variables - ie. you are dealing with an host under load balancing or sites available in different geographical regions). In this cases checkdnsrr() or dns_get_record(), with different php support and implementation, come in handy:
 
 $host = “phptips.net”;
 print_r(dns_get_record($host, DNS_A));
@@ -240,7 +240,7 @@ Must be that session cookies are too sweet, this explains why Javascript persist
     <DATE>Tue October 19th 2021</DATE>
     <TITLE>All paths take to Rome</TITLE>
     <BODY><![CDATA[      
-Honestly one thing is to exaggerate with best practices and one thing is to not care at all. Probably the right approach resides still in the middle. An other consideration comes about PHP bugs and hacking, but this is out of the scope of this *tip*. However, if you want to close all in a *safe*, PHP supplies you with the php.ini open_basedir directive. Setting *open_basedir* with the root path of your web app you are going to force eg. PHP includes or fopen() calls to handle only scripts contained in that path.
+Honestly one thing is to be anxious for best practices and one thing is to not care at all. Probably the right approach resides still in the middle. Other considerations come under the voice "PHP bugs and hacking", but this is out of the scope of this *tip*. However, if you want to close all in a *safe*, PHP supplies you with the php.ini open_basedir directive. Setting *open_basedir* with the root path of your web app you are going to force eg. PHP includes or fopen() calls to handle only scripts contained in that path.
 ]]></BODY>  
     <SEE/>
 		<SEEURL/>
@@ -253,7 +253,7 @@ Honestly one thing is to exaggerate with best practices and one thing is to not 
     <DATE>Wed October 20th 2021</DATE>
     <TITLE>Unicode call to Multibyte</TITLE>
     <BODY><![CDATA[      
-When you are going to develop a web application tailored for a broad audience using Unicode you should not forget about PHP itself. Indeed, PHP through the optional mbstring module gives at your disposal a set of functions named *multibyte string functions* that allow you to deal with unicode string with no worry. And what does it mean to you choosing a multibyte string function like mb_stripos() instead of the *standard* stripos()? It means exactly not looking at stripos() failing on unicode strings.
+When we are going to develop a web application tailored for a broad audience, using Unicode, we should not forget about PHP itself. Indeed, PHP through the optional mbstring module gives at our disposal a set of functions named *multibyte string functions* that allow us to deal with unicode string with ease. And what does it mean to us choosing a multibyte string function like mb_stripos() instead of the *standard* stripos()? It means exactly looking at stripos() failing on unicode strings.
 ]]></BODY>  
     <SEE>PHP: Introduction to Multibyte strings</SEE>  
 		<SEEURL>https://www.php.net/manual/en/intro.mbstring.php</SEEURL>
@@ -266,7 +266,7 @@ When you are going to develop a web application tailored for a broad audience us
     <DATE>Wed October 20th 2021</DATE>
     <TITLE>Being strict better than wrong</TITLE>
     <BODY><![CDATA[      
-Playing around your code with strings, mainly if you are using them as a shortcut to arrays in your configuration file.. you can break into a little semantical problem of functions like stripos(): a 0 position of the needle in the hashtag could be evaluated as a false result. The fix using the strict comparison operator comes really in handy:
+Playing around your code with strings (mainly if you are using them as a shortcut for arrays in your configuration file..) you can break into a little semantical problem of functions like stripos(): a 0 position of the needle in the hashtag could be evaluated as a false result. The fix using the strict comparison operator comes really in handy:
 
 $bestSites = “PHPTips.net|..|”;
 

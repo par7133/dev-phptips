@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<!-- File name: index.xml (deployment) 
+BSD 3-Clause License
+
+Copyright (c) 2021, 2024, 5 Mode
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?xml-stylesheet type="text/xsl" href="deployment.xsl"?>
+
+<CONTENT>
+	<ITEM>
+    <ID>2</ID>
+    <DATE>Thu October 14th 2021</DATE>
+    <TITLE>Initialization: one file, easy life</TITLE>
+    <BODY><![CDATA[
+Having wrote just a small router with the classic *Hello World*, *Back to Life*, *Iron Clothes* actions.. you remain to decide where to initialize your new web application. There is no better way than including an ad-hoc init.inc file where to set all the needed resources, autoloader, session, cache, error handling, etc.
+]]></BODY>    
+    <SEE/>  
+		<SEEURL/>
+    <TYPE>tip</TYPE>
+    <CAT>deployment</CAT>
+		<INDEX>1</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>10</ID>
+    <DATE>Sun October 17th 2021</DATE>
+    <TITLE>Used to latest PHP modernity</TITLE>
+    <BODY><![CDATA[      
+Since PHP 5.6 lot of time has gone and lucky it is so: many years of support and bug fixing has been going on under development since there. Less fashinating is the fact that we need to keep our servers updated to the last version of PHP, and expecially thinking to your production server is not so *healthy*. Two news come useful for these cases. First, PHP latest versions have a good back compatibility with their ancestors. Second, devops software like Docker comes in handy to solve *little* deployment prbs. Anyway your *devview* should point to this doc: 
+]]></BODY>  
+    <SEE>Supported versions</SEE>  
+		<SEEURL>https://php.net/supported-versions</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>deployment</CAT>
+		<INDEX>2</INDEX>
+	</ITEM>  
+</CONTENT>

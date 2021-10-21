@@ -4,7 +4,7 @@
 
 <xsl:output method="html" version="4"/>
 
-<!-- File name: index.xsl 
+<!-- File name: deployment.xsl 
 BSD 3-Clause License
 
 Copyright (c) 2021, 2024, 5 Mode
@@ -41,7 +41,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	  <HTML>
 	  <HEAD>
 
-      <TITLE>PHP Tips: All</TITLE>
+      <TITLE>PHP Tips: Deployment</TITLE>
 	  
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
@@ -63,22 +63,22 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <table class="main-table">
       <tr>
         <td class="header-td">
-           
-          <div class="burger-menu" style="display:none;"><img src="./res/burger-menu2.png" style="width:40px"/></div> 
-           
+        
+          <div class="burger-menu" style="display:none;"><img src="./res/burger-menu2.png" style="width:40px"/></div>
+        
           <div class="header-logo"><a href="/" class="header-aaa"><span style="color:black;"><i>php</i></span><span style="color:red; font-size:20px;">tips</span></a></div>
           <div class="header-link noxs"><a href="https://github.com/par7133/phptips.net/tree/main/downloads" class="header-aaa">Downloads</a></div>
           <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net/discussions" class="header-aaa">Talk</a></div>
           <div class="header-link dktoponly"><a href="http://github.com/par7133/phptips.net" class="header-aaa">Join in</a></div>
           <div class="header-link dktoponly"><a href="mailto:info@phptips.net" class="header-aaa">Feedback</a></div>
-      
+
         </td>   
-        <td class="search-td">       
+        <td class="search-td">  
           
           <input id="q" list="liveres" type="text" class="search-box" placeholder="search" maxlength="30"/>&#8201;&#8201;
           
           <datalist id="liveres">
-          <xsl:for-each select="ITEM[TYPE='tip']">
+          <xsl:for-each select="ITEM[TYPE='tip' and CAT='deployment']">
 		
 			    <xsl:sort select="ID" data-type="number" order="ascending"/>
 
@@ -96,8 +96,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <tr class="cat-list-tr">
         <td class="cat-list-td" colspan="2">
           
-          <div class="cat" onclick="openLink('/','_self')"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/deployment','_self')"><a href="/deployment" class="aaa3">deployment</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/','_self')"><a href="/" class="aaa3">all</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/deployment','_self')"><a href="/deployment" class="aaa3-selected">deployment</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat" onclick="openLink('/security.xml','_self')"><a href="/security.xml" class="aaa3">security</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat" onclick="openLink('/tuning.xml','_self')"><a href="/tuning.xml" class="aaa3">tuning</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat" onclick="openLink('/data.xml','_self')"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
@@ -108,78 +108,78 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <div class="cat" onclick="openLink('/int.xml','_self')"><a href="/int.xml" class="aaa3">int</a></div><br class="mblonly" style="display:none;"/>
           
         </td>  
-      </tr>     
-      <tr>         
-       <td id="content-td" colspan="2">
+      </tr>      
+      <tr>
+        <td id="content-td" colspan="2">
       
         <div id="content-cont">
       
         <table class="content-table">     
         <tr>
-		    <td class="tips-td">
-          
-          <xsl:for-each select="ITEM[TYPE='tip']">
-		
-			    <xsl:sort select="ID" data-type="number" order="ascending"/>
-		
-			    <div>
-            <xsl:attribute name="id"><xsl:value-of select="ID"/></xsl:attribute>
-            <xsl:attribute name="style">padding:10px;</xsl:attribute>
-		      	<span style="font-style:italic">
-              <xsl:value-of select="DATE"/>
-            </span><br/>
-            <a>
-              <xsl:attribute name="href"><xsl:value-of select="CAT"/>.xml</xsl:attribute>
-              <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
-              [&#8201;<xsl:value-of select="CAT"/>&#8201;]
-            </a>
-            &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
-            <hr class="hr-tips"/>    
-            <pre style="width:100%;white-space:break-spaces;"><xsl:value-of select="BODY"/></pre>
+          <td class="tips-td">
             
-            <xsl:choose>
-            <xsl:when test="SEE!=''">
-              see:&#8201;
+            <xsl:for-each select="ITEM[TYPE='tip' and CAT='deployment']">
+      
+            <xsl:sort select="ID" data-type="number" order="ascending"/>
+      
+            <div>
+              <xsl:attribute name="id"><xsl:value-of select="ID"/></xsl:attribute>
+              <xsl:attribute name="style">padding:10px;</xsl:attribute>
+              <span style="font-style:italic">
+                <xsl:value-of select="DATE"/>
+              </span><br/>
               <a>
-                <xsl:attribute name="href"><xsl:value-of select="SEEURL"/></xsl:attribute>
-                <xsl:attribute name="style">font-weight:600; font-style:italic; color:#FFFFFF;</xsl:attribute>
-                "<xsl:value-of select="SEE"/>"
-              </a>  
-            </xsl:when> 
-            </xsl:choose>
-             
-          </div>
-		
-	      	</xsl:for-each>
+                <xsl:attribute name="href"><xsl:value-of select="CAT"/>.xml</xsl:attribute>
+                <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
+                [&#8201;<xsl:value-of select="CAT"/>&#8201;]
+              </a>
+              &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
+              <hr class="hr-tips"/>    
+              <pre style="width:100%;white-space:break-spaces;"><xsl:value-of select="BODY"/></pre>
+              
+              <xsl:choose>
+              <xsl:when test="SEE!=''">
+                see:&#8201;
+                <a>
+                  <xsl:attribute name="href"><xsl:value-of select="SEEURL"/></xsl:attribute>
+                  <xsl:attribute name="style">font-weight:600; font-style:italic; color:#FFFFFF;</xsl:attribute>
+                  "<xsl:value-of select="SEE"/>"
+                </a>  
+              </xsl:when> 
+              </xsl:choose>
+
+            </div>
+      
+            </xsl:for-each>
+            
+            <br/><br/><br/>
+            
+          </td>
           
-          <br/><br/><br/>
+          <td id="tdl" class="index-td">
+
+            <xsl:for-each select="ITEM[TYPE='tip' and CAT='deployment']">
+      
+            <xsl:sort select="ID" data-type="number" order="ascending"/>
+      
+            <div class="index-ve-cont">
+              <a>
+                <xsl:attribute name="target">_self</xsl:attribute> 
+                <xsl:attribute name="class">aaa2</xsl:attribute>
+                <xsl:attribute name="href">#<xsl:value-of select="ID"/></xsl:attribute>
+                <span style="color:lightgray">&lt; &gt;</span>&#8201;&#8201;<span style="white-space:no-wrap"><xsl:value-of select="TITLE"/></span>
+              </a>
+            </div>
+
+            <hr class="hr-index"/>  
+      
+            </xsl:for-each>
+
+          </td>
           
-        </td>
-        
-        <td id="tdl" class="index-td">
-
-          <xsl:for-each select="ITEM[TYPE='tip']">
-		
-			    <xsl:sort select="ID" data-type="number" order="ascending"/>
-		
-          <div class="index-ve-cont">
-            <a>
-              <xsl:attribute name="target">_self</xsl:attribute> 
-              <xsl:attribute name="class">aaa2</xsl:attribute>
-              <xsl:attribute name="href">#<xsl:value-of select="ID"/></xsl:attribute>
-              <span style="color:lightgray">&lt; &gt;</span>&#8201;&#8201;<span style="white-space:no-wrap"><xsl:value-of select="TITLE"/></span>
-            </a>
-          </div>
-
-          <hr class="hr-index"/>  
-    
-	      	</xsl:for-each>
-
-        </td>
-        
-        <td width="4%" class="index-empty-td">
-          &#8201;
-        </td>  
+          <td width="4%" class="index-empty-td">
+            &#8201;
+          </td>  
         </tr>
         </table>
         </div>
@@ -187,7 +187,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       </td>  
       </tr>
       </table>
-      
+
       <div id="footerCont">&#8201;</div>
       <div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&#8201;&#8201;<a class="aaa" href="dd.html">Disclaimer</a>.&#8201;&#8201;A <a class="aaa" href="http://5mode.com">5 Mode</a> project and <a class="aaa" href="http://wysiwyg.systems">WYSIWYG</a> system. Some rights reserved.</span></div>
 
@@ -196,7 +196,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         var linkt = [];
         var linkids = [];
         
-        <xsl:for-each select="ITEM[TYPE='tip']">
+        <xsl:for-each select="ITEM[TYPE='tip' and CAT='deployment']">
   
         <xsl:sort select="ID" data-type="number" order="ascending"/>
   
@@ -204,7 +204,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         linkids[<xsl:value-of select="ID"/>] = <xsl:value-of select="ID"/>;
         
         </xsl:for-each>
-      
+         
       </script>
          
       <script src="./js/common.js" type="text/javascript"></script>
@@ -229,7 +229,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       
 	  </BODY>
 	  </HTML>
-
+     	
 	</xsl:template>
 
 </xsl:stylesheet> 
