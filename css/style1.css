@@ -213,7 +213,7 @@ a {
   border-bottom: 3.5px solid #4c5d8d;
   width:30%; 
   text-align:left; 
-  min-width: 400px;
+  /*min-width: 400px;*/
 }
 .tips-td {
   width:70%; 
