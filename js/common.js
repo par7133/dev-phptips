@@ -1,5 +1,9 @@
 
 var bBurgerMenuVisible = false;
+
+function openLink(href, target) {
+  window.open(href, target);
+}
     
 $("input#q").on("keydown",function(e){
   key = e.which; 
@@ -57,7 +61,7 @@ function setContent() {
     if (bodyRect.width > 1000) {
       $(this).css("display", "none");
     } else {
-      $(this).css("display", "inline");
+      //$(this).css("display", "inline");
     }    
   });  
   $(".cat").each(function(){
@@ -85,8 +89,8 @@ function mymain() {
 
  setTimeout("setFooterPos()", 1000);
 
- $("#content-td").css("height", (parseInt(window.innerHeight) - 118) + "px");
- $("#content-cont").css("height", (parseInt(window.innerHeight) - 118) + "px");     
+ $("#content-td").css("height", (parseInt(window.innerHeight) - 80) + "px");
+ $("#content-cont").css("height", (parseInt(window.innerHeight) - 80) + "px");     
 
 } 
 
