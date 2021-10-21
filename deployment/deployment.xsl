@@ -50,11 +50,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	    <meta name="robots" content="index,follow"/>
       <meta name="author" content="5 Mode"/> 
      
-	    <link rel="shortcut icon" href="./res/favicon.ico"/>
+	    <link rel="shortcut icon" href="../res/favicon.ico"/>
 	  	
-      <script src="./js/jquery-3.1.0.min.js" type="text/javascript"></script>
+      <script src="../js/jquery-3.1.0.min.js" type="text/javascript"></script>
 
-      <link href="./css/style1.css" type="text/css" rel="stylesheet"/>
+      <link href="../css/style1.css" type="text/css" rel="stylesheet"/>
     
 	  </HEAD>
 
