@@ -133,7 +133,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
               <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
               [&#8201;<xsl:value-of select="CAT"/>&#8201;]
             </a>
-            &#8201;&#8201;<span style="font-weight:900;"><xsl:value-of select="TITLE"/></span>
+            &#8201;&#8201;<span style="font-weight:900;word-break: break-word;"><xsl:value-of select="TITLE"/></span>
             <hr class="hr-tips"/>    
             <pre style="width:100%;white-space:break-spaces;"><xsl:value-of select="BODY"/></pre>
             
