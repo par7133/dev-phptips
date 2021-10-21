@@ -59,10 +59,16 @@ function setContent() {
  
   if (bodyRect.width < 800) {
     $(".search-td").css("min-width","300px");
+    $(".tips-td").css("width","65%");
+    $(".index-td").css("width","35%");
+    $(".index-empty-td").css("width","0%");
     $(".index-td").css("min-width","0px");
   } else {
     $(".search-td").css("min-width","");
+    $(".tips-td").css("width","");
+    $(".index-td").css("width","");
     $(".index-td").css("min-width","");
+    $(".index-empty-td").css("width","");
   }
     
   // Burger Menu
