@@ -48,7 +48,7 @@ function setContent() {
   });  
 
   $(".noxs").each(function(){
-    if (bodyRect.width > 500) {
+    if (bodyRect.width > 700) {
       $(this).css("display", "inline");
     } else {
       $(this).css("display", "none");
