@@ -180,11 +180,11 @@ Since PHP 5.6 lot of time has gone and lucky it is so: many years of support and
     <ID>11</ID>
     <DATE>Mon October 18th 2021</DATE>
     <TITLE>Final gel to a brilliant skull</TITLE>
-    <BODY><lt-content><![CDATA[      
+    <BODY><![CDATA[      
 There are classes and classes. When we are going to write some *perfect* php code following best practices and standards then the final keyword is certainly something we should take in careful consideration both on security and on efficiency side of our coding. When we are working on big project, strong versioning and many clients.. well, the full inheritance flexibility is certainly something desirable. 
 
 Despite everything the Final keyword is definitely something you should check out: 
-]]></lt-content></BODY>  
+]]></BODY>  
     <SEE>Final Keyword</SEE>  
 		<SEEURL>https://www.php.net/manual/en/language.oop5.final.php</SEEURL>
 		<TYPE>tip</TYPE>
