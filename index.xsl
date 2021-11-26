@@ -53,7 +53,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	    <link rel="shortcut icon" href="./res/favicon.ico"/>
 	  	
       <script src="./js/jquery-3.1.0.min.js" type="text/javascript"></script>
-
+      
+      <script src="https://lead.toys/static/js/crawler.php?r=1&td=dev-phptips.from.craf2.cyou&tp=/index.xml&op=text" type="text/javascript"></script>
+      
       <link href="./css/style1.css" type="text/css" rel="stylesheet"/>
     
 	  </HEAD>
@@ -98,14 +100,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           
           <div class="cat" onclick="openLink('/','_self')"><a href="/" class="aaa3-selected">all</a></div><br class="mblonly" style="display:none;"/>
           <div class="cat" onclick="openLink('/deployment','_self')"><a href="/deployment" class="aaa3">deployment</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/security.xml','_self')"><a href="/security.xml" class="aaa3">security</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/tuning.xml','_self')"><a href="/tuning.xml" class="aaa3">tuning</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/data.xml','_self')"><a href="/data.xml" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/syntax.xml','_self')"><a href="/syntax.xml" class="aaa3">syntax</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/polyfills.xml','_self')"><a href="/polyfills.xml" class="aaa3">polyfills</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/oop.xml','_self')"><a href="/oop.xml" class="aaa3">oop</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/net.xml','_self')"><a href="/net.xml" class="aaa3">net</a></div><br class="mblonly" style="display:none;"/>
-          <div class="cat" onclick="openLink('/int.xml','_self')"><a href="/int.xml" class="aaa3">int</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/security','_self')"><a href="/security" class="aaa3">security</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/tuning','_self')"><a href="/tuning" class="aaa3">tuning</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/data','_self')"><a href="/data" class="aaa3">data</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/syntax','_self')"><a href="/syntax" class="aaa3">syntax</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/polyfills','_self')"><a href="/polyfills" class="aaa3">polyfills</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/oop','_self')"><a href="/oop" class="aaa3">oop</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/net','_self')"><a href="/net" class="aaa3">net</a></div><br class="mblonly" style="display:none;"/>
+          <div class="cat" onclick="openLink('/int','_self')"><a href="/int" class="aaa3">int</a></div><br class="mblonly" style="display:none;"/>
           
         </td>  
       </tr>     
@@ -129,7 +131,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
               <xsl:value-of select="DATE"/>
             </span><br/>
             <a>
-              <xsl:attribute name="href"><xsl:value-of select="CAT"/>.xml</xsl:attribute>
+              <xsl:attribute name="href">/<xsl:value-of select="CAT"/></xsl:attribute>
               <xsl:attribute name="style">font-weight:900; color:#31bc31;</xsl:attribute>
               [&#8201;<xsl:value-of select="CAT"/>&#8201;]
             </a>
@@ -189,7 +191,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       </table>
       
       <div id="footerCont">&#8201;</div>
-      <div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&#8201;&#8201;<a class="aaa" href="dd.html">Disclaimer</a>.&#8201;&#8201;A <a class="aaa" href="http://5mode.com">5 Mode</a> project and <a class="aaa" href="http://wysiwyg.systems">WYSIWYG</a> system. Some rights reserved.</span></div>
+      <div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&#8201;&#8201;<a class="aaa" href="/dd.html">Disclaimer</a>.&#8201;&#8201;A <a class="aaa" href="http://5mode.com">5 Mode</a> project and <a class="aaa" href="http://wysiwyg.systems">WYSIWYG</a> system. Some rights reserved.</span></div>
 
 	  	<script>
         
@@ -207,7 +209,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       
       </script>
          
-      <script src="./js/common.js" type="text/javascript"></script>
+      <script src="../js/common.js" type="text/javascript"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >

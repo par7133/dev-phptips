@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- File name: index.xml 
+<!-- File name: index.xml (root)
 BSD 3-Clause License
 
 Copyright (c) 2021, 2024, 5 Mode
@@ -180,11 +180,11 @@ Since PHP 5.6 lot of time has gone and lucky it is so: many years of support and
     <ID>11</ID>
     <DATE>Mon October 18th 2021</DATE>
     <TITLE>Final gel to a brilliant skull</TITLE>
-    <BODY><![CDATA[      
-There are classes and classes. When we are going to write some *perfect* code following best practices and standards then the final keyword is certainly something we should take in careful consideration both on security and on efficiency side of our coding. When we are working on big project, strong versioning and many clients.. well, the full inheritance flexibility is certainly something desirable. 
+    <BODY><lt-content><![CDATA[      
+There are classes and classes. When we are going to write some *perfect* php code following best practices and standards then the final keyword is certainly something we should take in careful consideration both on security and on efficiency side of our coding. When we are working on big project, strong versioning and many clients.. well, the full inheritance flexibility is certainly something desirable. 
 
 Despite everything the Final keyword is definitely something you should check out: 
-]]></BODY>  
+]]></lt-content></BODY>  
     <SEE>Final Keyword</SEE>  
 		<SEEURL>https://www.php.net/manual/en/language.oop5.final.php</SEEURL>
 		<TYPE>tip</TYPE>
@@ -264,7 +264,7 @@ When we are going to develop a web application tailored for a broad audience, us
   <ITEM>
     <ID>17</ID>
     <DATE>Wed October 20th 2021</DATE>
-    <TITLE>Being strict better than wrong</TITLE>
+    <TITLE>Strict better than wrong</TITLE>
     <BODY><![CDATA[      
 Playing around your code with strings (mainly if you are using them as a shortcut for arrays in your configuration file..) you can break into a little semantical problem of functions like stripos(): a 0 position of the needle in the hashtag could be evaluated as a false result. The fix using the strict comparison operator comes really in handy:
 
@@ -282,4 +282,49 @@ if (stripos($bestSites, “PHPTips.net”) !== false) {
     <CAT>syntax</CAT>
 		<INDEX>17</INDEX>
 	</ITEM>
+  <ITEM>
+    <ID>18</ID>
+    <DATE>Fri October 22th 2021</DATE>
+    <TITLE>PHP with a performant FPM</TITLE>
+    <BODY><![CDATA[      
+The old but safest solution to run PHP by the Apache SAPI mod_php module seems to have been abandoned by the most. In fact, PHP now comes supplied in its package (on installations with —enable-fpm) with PHP-FPM, an high configurable and high performant FastCGI Process Manager. PHP-FPM has different settings but mainly can be configured to run in static (fastest response, but resources consuming), dynamic (fast response, process friendly) or on demand mode (slower response, resource friendly). Have a look to the following link for all tunable settings: 
+]]></BODY>  
+    <SEE>An Introduction to PHP-FPM Tuning</SEE>  
+		<SEEURL>https://tideways.com/profiler/blog/an-introduction-to-php-fpm-tuning</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>tuning</CAT>
+		<INDEX>18</INDEX>
+	</ITEM>
+  <ITEM>
+    <ID>19</ID>
+    <DATE>Fri October 22th 2021</DATE>
+    <TITLE>PHP with a performant Apache</TITLE>
+    <BODY><![CDATA[      
+The Event Multi-Processing Module (MPM) of Apache allows us to tune the behavior of httpd responding simultaneously to more requests by the listeners threads, and set how to free up threads to serve new requests. Please note that in the recent Apache installations the tuned “mpm_event_module” doesn’t figure as a physical file but as a *static* module. Have a look to the following link for all possible settings:
+]]></BODY>  
+    <SEE>Apache2 and php fpm performance optimization</SEE>  
+		<SEEURL>https://medium.com/@sbuckpesch/apache2-and-php-fpm-performance-optimization-step-by-step-guide-1bfecf161534</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>tuning</CAT>
+		<INDEX>19</INDEX>
+	</ITEM>  
+  <ITEM>
+    <ID>20</ID>
+    <DATE>Fri October 22th 2021</DATE>
+    <TITLE>PHP with a performant Nginx</TITLE>
+    <BODY><![CDATA[      
+Nginx is a light and high performant web server that can be used as reversed proxy (as frontend server to serve static content only) and is usually coupled with PHP-FPM. There is a lot of good documentation around how to tune performance of Nginx. However here're two directives to cut on server response time almost instantaniously:
+
+# Use Thread Pools (http scope)
+aio threads;
+
+# Reuseport Socket Option (server scope)
+listen 80 reuseport;
+]]></BODY>  
+    <SEE>Nginx Performance Tuning – Tips and Tricks</SEE>  
+		<SEEURL>https://www.nginx.com/blog/performance-tuning-tips-tricks/</SEEURL>
+		<TYPE>tip</TYPE>
+    <CAT>tuning</CAT>
+		<INDEX>20</INDEX>
+	</ITEM>  
 </CONTENT>
