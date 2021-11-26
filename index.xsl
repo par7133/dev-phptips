@@ -2,7 +2,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		version="1.0"> 
 
-<xsl:output method="html"/>
+<xsl:output method="html" version="5"/>
 
 <!-- File name: index.xsl 
 BSD 3-Clause License
