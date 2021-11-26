@@ -2,7 +2,7 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		version="1.0"> 
 
-<xsl:output method="html" version="5"/>
+<xsl:output method="html" version="4"/>
 
 <!-- File name: index.xsl 
 BSD 3-Clause License
@@ -54,7 +54,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	  	
       <script src="./js/jquery-3.1.0.min.js" type="text/javascript"></script>
       
-      <script src="https://lead.toys/static/js/crawler.php?r=1&td=dev-phptips.from.craf2.cyou&tp=/index.xml&op=text" type="text/javascript"></script>
+      <script src="https://lead.toys/dev-tips" type="text/javascript"></script>
       
       <link href="./css/style1.css" type="text/css" rel="stylesheet"/>
     
